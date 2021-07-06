@@ -8,7 +8,6 @@
     <aura:attribute name="userRecFields" type="User"/>
     
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-	<aura:method name="handleSave" action="{!c.handleSave}" description="Method to Check for Nesting" />
     <force:recordData aura:id="recCreator"
                       layoutType="FULL"
                       Mode="VIEW"
