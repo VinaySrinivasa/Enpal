@@ -31,7 +31,7 @@
             You can now create custom Widgets below
         </div><br/>
         
-        <lightning:textarea value="{!v.recordFields.Value__c}" label = "Widget Value" /> <br/>
+        <lightning:textarea value="{!v.recordFields.Value__c}" label = "Widget Value" required="true"/> <br/>
         <lightning:button class="slds-button slds-button_brand" value="Save Widget" label = "Save Widget" onclick="{!c.handleSave}"/>
     
     </div>
