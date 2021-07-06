@@ -1,0 +1,40 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="recordFields" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    
+    <aura:attribute name="userRec" type="User"/>
+    <aura:attribute name="userRecFields" type="User"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:method name="handleSave" action="{!c.handleSave}" description="Method to Check for Nesting" />
+    <force:recordData aura:id="recCreator"
+                      layoutType="FULL"
+                      Mode="VIEW"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.recordFields}"
+                      targetError="{!v.recordError}" />
+    
+    <force:recordData aura:id="recLoader"
+                      recordId="{!$SObjectType.CurrentUser.Id}"
+                      fields="LastName,Profile.Name,Id"
+                      Mode="VIEW"
+                      targetRecord="{!v.userRec}"
+                      targetFields="{!v.userRecFields}" />
+    
+    <div id="widBox" class="slds-box slds-theme_shade" align="center">
+        <div aura:id="welcome" class="slds-text-heading_medium slds-text-color_inverse-weak" align="center">
+            WELCOME TO CYCLONE SOLUTIONS
+        </div><br/>
+        
+        <div class="slds-text-title_bold">
+            You can now create custom Widgets below
+        </div><br/>
+        
+        <lightning:textarea value="{!v.recordFields.Value__c}" label = "Widget Value" /> <br/>
+        <lightning:button class="slds-button slds-button_brand" value="Save Widget" label = "Save Widget" onclick="{!c.handleSave}"/>
+    
+    </div>
+    
+</aura:component>
