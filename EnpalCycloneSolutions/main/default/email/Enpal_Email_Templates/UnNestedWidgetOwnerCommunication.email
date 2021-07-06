@@ -1,0 +1,8 @@
+Dear {!Widget__c.OwnerFullName}
+
+Your widget {!Widget__c.Name} record value is not nested properly. 
+
+Please look into it. {!Widget__c.Link}
+
+Regards,
+Cyclone Team.

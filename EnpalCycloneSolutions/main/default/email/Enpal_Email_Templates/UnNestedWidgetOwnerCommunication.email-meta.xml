@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This is the template used to send email of a widget record is not properly nested</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>UnNestedWidgetOwnerCommunication</name>
+    <style>none</style>
+    <subject>Your Widget is not nested properly..!!!</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
